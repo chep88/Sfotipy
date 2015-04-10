@@ -11,23 +11,33 @@
 </head>
 <body>
 	<header class="header border.bottom">
+		<div class="logo">
+			<figure class="image isotipo left">
+				<img src="Images/logo.png" alt="Sfotipy"/>
+			</figure>
+			<div class="user right">
+				<figure class="avatar round left">
+					<img src="Images/Juan.jpg" alt="@JuanDaniel" width="38px" height="38px">
+				</figure>
+				<span class="username left">@JuanDaniel</span>
+			</div>
+			<div class="search right">
+					<span class="icon-search lupa"></span>
+					<input type="text" placeholder="Búsqueda" class="input" />
+					<span class="cierre">x</span>
+			</div>
+		</div>
 		<a href="#" class="button-menu icon-menu"></a>
 		<nav class="menu">
-			<ul class="list">
+			<ul class="list center-block wrap">
 				<li class="items">
 					<a href="#">Top Hits</a>
 				</li>
 				<li class="items">
-					<a href="#">Top Hits</a>
+					<a href="#">Profile</a>
 				</li>
 				<li class="items">
-					<a href="#">Top Hits</a>
-				</li>
-				<li class="items">
-					<a href="#">Playlist</a>
-				</li>
-				<li class="items">
-					<a href="#">Playlist</a>
+					<a href="#">Settings</a>
 				</li>
 				<li class="items">
 					<a href="#">Playlist</a>
@@ -38,7 +48,8 @@
 			<p>Top Hits</p>
 		</div>
 	</header>
-	<section class="playing small center-block">
+	<section class="playing small medium large">
+	<div class="music">
 		<figure class="image relative">
 			<img src="Images/test.png" width="320px" heigth="320px"alt="Come Get It Bae Pharrell Williams"  />
 			<div class="actions right-text">
@@ -73,6 +84,97 @@
 			<a href="" class="action gray padding-tb icon-random"></a>
 			<a href="" class="action gray icon-vol"></a>
 		</div>
+	</div>
+	<div class="playlist right">
+		<p class="name">
+			Girl
+		</p>
+		<p class="autor">
+			Pharrell Williams
+		</p>
+		<ul class="list">
+			<li class="items">
+				<span>
+					Marylin Monroe
+				</span>
+				<span class="right">
+					<a href="" class="action icon-add gray"></a>
+					<a href="" class="action icon-love gray"></a>
+					<a href="" class="action icon-share gray"></a>
+				</span>	
+			</li>
+			<li class="items">
+				<span>
+					Marylin Monroe
+				</span>
+				<span class="right">
+					<a href="" class="action icon-add gray"></a>
+					<a href="" class="action icon-love gray"></a>
+					<a href="" class="action icon-share gray"></a>
+				</span>	
+			</li>
+			<li class="items">
+				<span>
+					Marylin Monroe
+				</span>
+				<span class="right">
+					<a href="" class="action icon-add gray"></a>
+					<a href="" class="action icon-love gray"></a>
+					<a href="" class="action icon-share gray"></a>
+				</span>	
+			</li>
+			<li class="items">
+				<span>
+					Marylin Monroe
+				</span>
+				<span class="right">
+					<a href="" class="action icon-add gray"></a>
+					<a href="" class="action icon-love gray"></a>
+					<a href="" class="action icon-share gray"></a>
+				</span>	
+			</li>
+			<li class="items">
+				<span>
+					Marylin Monroe
+				</span>
+				<span class="right">
+					<a href="" class="action icon-add gray"></a>
+					<a href="" class="action icon-love gray"></a>
+					<a href="" class="action icon-share gray"></a>
+				</span>	
+			</li>
+			<li class="items">
+				<span>
+					Marylin Monroe
+				</span>
+				<span class="right">
+					<a href="" class="action icon-add gray"></a>
+					<a href="" class="action icon-love gray"></a>
+					<a href="" class="action icon-share gray"></a>
+				</span>	
+			</li>
+			<li class="items">
+				<span>
+					Marylin Monroe
+				</span>
+				<span class="right">
+					<a href="" class="action icon-add gray"></a>
+					<a href="" class="action icon-love gray"></a>
+					<a href="" class="action icon-share gray"></a>
+				</span>	
+			</li>
+			<li class="items">
+				<span>
+					Marylin Monroe
+				</span>
+				<span class="right">
+					<a href="" class="action icon-add gray"></a>
+					<a href="" class="action icon-love gray"></a>
+					<a href="" class="action icon-share gray"></a>
+				</span>	
+			</li>
+		</ul>
+	</div>
 	</section>
 	<section class="container">
 		<article class="song">
@@ -131,5 +233,9 @@
 			</p>
 		</article>
 	</section>
+	<script src='JS/underscore.js'></script>
+	<script src='JS/jquery-2.1.1.min.js'></script>
+	<script src='JS/backbone.js'></script>
+	<script src='JS/Sfotipy.js'></script>
 </body>
 </html>

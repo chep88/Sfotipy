@@ -1,18 +1,29 @@
 @import "normalize.styl"
 @import "fonts.styl"
+
+animacion(parametro)
+	-webkit-animation parametro
+	-moz-animation parametro
+	-ms-animation parametro
+	-o-animation parametro
+	animation parametro
+	
 gris_oscuro=#333333
 gris_claro=#818181
+body_claro=#F4F4F4
 
 body
 	font-family 'Varela Round', sans-serif
 	font-size 16px
-
 a 
 	text-decoration none
 figure
 	margin 0
 img
 	vertical-align top
+ul
+	margin 0
+	padding 0
 .container
 	font-size 0
 	padding 1.4rem
@@ -33,7 +44,6 @@ img
 	color gris_claro
 .menu
 	display none
-	
 .header
 	height 3.5em
 	position relative
@@ -42,9 +52,6 @@ img
 		text-align center
 		margin 0
 		line-height 3.5em
-.playing
-	&.small 
-		width 20em
 //buttons
 .button-menu
 	color gris_oscuro 
@@ -67,17 +74,26 @@ img
 		margin-right 0
 	&.gray
 		color gris_oscuro
-		
+//Clases UTILITARIAS
+.gray
+	color gris_claro
+.round
+	border-radius 50%
+	overflow hidden
 .relative
 	position relative
 .border-bottom
 	border-bottom 1px solid 
 .center-block
 	margin 0 auto
+.left
+	float left
+.right
+	float right
 .center-text
 	text-align center
 .right-text
-	text-align right
+	text-align  right
 .padding-tb
 	padding-rigth 10px
 .progress
@@ -103,6 +119,7 @@ img
 		width 30%
 		background-color #F91FA2
 		position relative
+		animacion(1s anim1 infinite)
 	.circle
 		height 10px
 		width 10px
@@ -111,3 +128,121 @@ img
 		position absolute
 		top -2px
 		right 0
+@keyframes anim1
+	from 
+		background-color red
+	to 
+		background-color blue
+.search
+	position relative
+.lupa
+	position absolute
+	left 12px
+	top 12px
+	color gris_claro
+.cierre
+	position absolute
+	top 6px
+	right 1.5em
+	font-size 1.4em
+	color gris_claro
+.playing
+	&.small 
+		width 20em
+.input
+	border-radius 5px
+	height 40px 
+	border 1px solid gris_claro
+	padding 0 1em 0 2em
+	margin-right 1em
+.playlist
+	display none
+.logo
+	display none
+@media screen and (min-width:480px)
+	.song
+		&:nth-child(even)
+			margin-right 1em
+	.image
+		img
+			width 100%
+			height auto
+	.playing
+		&.medium
+			width auto
+@media screen and (min-width:1000px)
+	body 
+		background-color body_claro
+	.menu
+		display block
+		overflow hidden
+		.list
+			overflow hidden
+		.items
+			float left
+			list-style none	
+			a
+				display block
+				color gris_oscuro
+				text-transform uppercase
+				letter-spacing 2px
+				cursor pointer
+				padding 1em
+				border-top 5px solid transparent
+				transition .3s border-top
+				&:hover
+					border-top 5px solid gris_oscuro
+	.button-menu
+		display none
+	.header
+		height auto
+		.title
+			display none
+	.isotipo
+		width 122px
+	.logo
+		display block
+		padding 1.3em 8em
+		overflow hidden
+		min-width 1000px
+		background-color white
+		border-bottom 1px solid gris_oscuro
+	.avatar
+		width 38px
+		height 38px		
+	.username
+		color gris_claro
+		position relative
+		top 8px
+		margin-left 0.5em 
+		&:after
+			content ""
+			border-left 7px solid transparent 
+			border-right 7px solid transparent
+			border-top 9px solid gris_claro
+			display inline-block
+			margin-left .4em
+	.music 
+		width 32.5em
+		float left
+		.name
+		.author
+			display none
+	.playlist
+		display block
+		width 22em
+		padding 0 1.5em
+		border-left 1px solid gris_claro
+		.items
+			padding 1em 0
+			list-style none
+			border-bottom 1px solid gris_claro
+		.action
+			font-size 14px 
+			color gris_claro	
+	.playing
+		padding-top 2em
+		&.large
+			margin 0 auto
+			width 62.5em
+			overflow hidden
